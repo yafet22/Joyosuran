@@ -164,6 +164,7 @@ class BuildingController extends Controller
 
         return redirect()->route('showBuildings', ['id' => $buildings->regionid]);
     }
+    
 
     /**
      * Remove the specified resource from storage.
@@ -184,4 +185,14 @@ class BuildingController extends Controller
         $status = StatusBangunan::pluck('nama','statusid');
         return view('detailbuilding',compact('buildings','status'));
     }
+
+    public function getPie($id) {
+        $App = Building::find($id);
+
+        return view('pieChart', compact('App'));
+    }
+    // public function getJumlahStatsus($id, $jenis){
+    //     $App = Building::
+    // }
+
 }

@@ -61,6 +61,12 @@
                         </a>
                     </li>
 
+                    <li>
+                        <a href="{{ url('/infographic') }}">
+                            <i class="ti-pie-chart"></i>
+                            <p>INFOGRAPHIC</p>
+                        </a>
+                    </li>
                 </ul>
     	</div>
     </div>

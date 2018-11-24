@@ -50,6 +50,7 @@ Route::resource('Buildings','BuildingController');
 Route::resource('StatusBangunan','StatusBangunanController');
 Route::resource('Kecamatans','KecamatanController');
 Route::resource('Kelurahans','KelurahanController');
+Route::
 
 Route::get('dynamicModal/{id}',[
     'as'=>'dynamicModal',
@@ -80,6 +81,3 @@ Route::get('showBuildings/{id}',[
     'as'=>'showBuildings',
     'uses'=> 'RegionalController@showBuildings'
 ]);
-
-
-
