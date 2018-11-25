@@ -62,7 +62,7 @@
                     </li>
 
                     <li>
-                        <a href="{{ url('/infographic') }}">
+                        <a href="{{ url('/pieChart') }}">
                             <i class="ti-pie-chart"></i>
                             <p>INFOGRAPHIC</p>
                         </a>
@@ -73,7 +73,7 @@
 
     <div class="main-panel">
         <nav class="navbar navbar-default">
-            <div class="container-fluid">
+            <div class="container-fluid" style="background-color:#9F0D20">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle">
                         <span class="sr-only">Toggle navigation</span>
@@ -81,17 +81,18 @@
                         <span class="icon-bar bar2"></span>
                         <span class="icon-bar bar3"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Dashboard</a>
+                    <a class="navbar-brand" style="color:white" href="#">Status Bangunan</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        
+
                         <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="ti-bell"></i>
-									<p>Admin</p>
-									<b class="caret"></b>
+                                    <i style="color:white"class="ti-bell"></i>
+									<p style="color:white">Admin</p>
+									<b style="color:white"class="caret"></b>
                               </a>
+
                               <ul class="dropdown-menu">
                                     <li><a href="#editaccount" data-toggle="modal" data-target="#editaccount">Edit Account</a></li>
                                     <li><a href="{{ url('logout') }}">Logout</a></li>
@@ -135,7 +136,7 @@
                     <div class="col-md-12 order-first mt-2">
                         <div class="table-responsive">
                             <table id=tableadmin class="table table-md table-bordered">
-                                <tr style="background-color:#EB5E28;color:white;">
+                                <tr style="background-color:#9F0D20;color:white;">
                                     <th class="font-weight-bold" style="text-align: center;">ID Status</th>
                                     <th class="font-weight-bold" style="text-align: center;">Nama</th>
                                     <th class="font-weight-bold" style="text-align: center;">Keterangan</th>

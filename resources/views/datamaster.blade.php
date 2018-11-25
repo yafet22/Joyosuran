@@ -61,7 +61,7 @@
                         </li>
                         
                     <li>
-                        <a href="{{ url('/infographic') }}">
+                        <a href="{{ url('/pieChart') }}">
                             <i class="ti-pie-chart"></i>
                             <p>INFOGRAPHIC</p>
                         </a>

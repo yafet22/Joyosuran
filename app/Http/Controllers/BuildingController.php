@@ -186,13 +186,13 @@ class BuildingController extends Controller
         return view('detailbuilding',compact('buildings','status'));
     }
 
-    public function getPie($id) {
-        $App = Building::find($id);
+    public function getJumlahStatus(){
+        $Hunian = Building::where('fungsibangunan','hunian')->count();
+        $keagamaan = Building::where('fungsibangunan','keagamaan')->count();
+        $usaha = Building::where('fungsibangunan','usaha')->count();
+        $sosial_budaya = Building::where('fungsibangunan','sosial-budaya')->count();
+        $khusus = Building::where('fungsibangunan','khusus')->count();
 
-        return view('pieChart', compact('App'));
+        return view('pieChart', compact('Hunian','keagamaan', 'usaha','sosial_budaya','khusus'));
     }
-    // public function getJumlahStatsus($id, $jenis){
-    //     $App = Building::
-    // }
-
 }

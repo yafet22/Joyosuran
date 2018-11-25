@@ -62,7 +62,7 @@
 
                         
                     <li>
-                        <a href="{{ url('/infographic') }}">
+                        <a href="{{ url('/pieChart') }}">
                             <i class="ti-pie-chart"></i>
                             <p>INFOGRAPHIC</p>
                         </a>
@@ -129,7 +129,7 @@
                         <div class="col-md-12 order-first mt-2">
                             <div class="table-responsive">
                                 <table id=tableadmin class="table table-md table-bordered">
-                                    <tr style="background-color:#EB5E28;color:white;">
+                                    <tr style="background-color:#9F0D20;color:white;">
                                         <th class="font-weight-bold" style="text-align: center;">No</th> 
                                         <th class="font-weight-bold" style="text-align: center;">Kecamatan</th> 
                                         <th class="font-weight-bold" style="text-align: center;">Kelurahan</th>

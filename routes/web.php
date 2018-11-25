@@ -50,10 +50,8 @@ Route::resource('Buildings','BuildingController');
 Route::resource('StatusBangunan','StatusBangunanController');
 Route::resource('Kecamatans','KecamatanController');
 Route::resource('Kelurahans','KelurahanController');
-Route::
 
-Route::get('dynamicModal/{id}',[
-    'as'=>'dynamicModal',
+Route::get('dynamicModal/{id}',[ 'as'=>'dynamicModal',
     'uses'=> 'RegionalController@loadModal'
 ]);
 
@@ -81,3 +79,6 @@ Route::get('showBuildings/{id}',[
     'as'=>'showBuildings',
     'uses'=> 'RegionalController@showBuildings'
 ]);
+
+Route::get('/pieChart','BuildingController@getJumlahStatus');
+Route::get('Building/pieChart', 'BuildingController@getJumlahStatus')->name('pieChart');

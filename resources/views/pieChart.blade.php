@@ -1,18 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
 <div class="row">
-        <div class="col-md-12 text-center center-block mb-3">
+    <div class="col-md-12 text-center center-block mb-3">
         </div>
     </div>
-
-<canvas id="myChart"></canvas>
-
+<canvas id="myChart"></canvas> 
+</body>
+</html>
+<script src="path/to/chartjs/dist/Chart.js"></script>
 <script src="{!! mix('js/app.js') !!}"></script>
 <script>
 var ctx = document.getElementById("myChart");
-var dataTable = [10,12,13,14,15,16]
-var myChart = new Chart(ctx, {
+
+var dataTable = [{{ $Hunian }}, {{ $keagamaan }}, {{ $usaha }},{{ $sosial_budaya }}, {{ $khusus }}]
+var myPieChart = new Chart(ctx, {
     type: 'pie',
     data: {
-        labels: ["Hunian","Keagamaan", "Usaaha", "Sosial Budaya", "Khusus"],
+        labels: ["Hunian","Keagamaan", "Usaha", "Sosial Budaya", "Khusus"],
         datasets: [{
             label: 'Fungsional',
             data: dataTable,
@@ -35,7 +46,7 @@ var myChart = new Chart(ctx, {
             pointHitRadius : 10,
             pointRadius : 10,
             pointHoverBorderColor : 'rgba(255, 159, 64, 3)',
-        }],
+        }]
         
     },
     
@@ -43,17 +54,16 @@ var myChart = new Chart(ctx, {
         scales: {
             yAxes: [{
                 ticks: {
-                    beginAtZero:true,
-                    min:0,
-                    max:15,
-                    ticks:1,
-                    interval:1
+                    beginAtZero:true
                 }
             }]
         }
     }
 });
-
-
 </script>
-</html>
+
+
+
+
+
+
