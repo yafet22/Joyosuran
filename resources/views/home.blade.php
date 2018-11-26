@@ -33,9 +33,20 @@
 
             width: 100%;
 
-            height: 500px;
+            height: 700px;
 
         }
+
+        .center-navbar{
+            display: block; 
+            text-align: center; 
+            color: white; 
+            padding: 15px; 
+            /* adjust based on your layout */
+            margin-left: 50px; 
+            margin-right: 50px;
+        }
+                    
 
     </style>
 </head>
@@ -52,13 +63,23 @@
                     <span style="background-color:white" class="icon-bar bar3"></span>
                 </button>
                 
-                    <div id="logo">
-					        <a href=""><img alt="" src="images/logo.png" title="Database Bangunan Kota Surakarta">
-                            </a>
-                            <h4 style="text-align:center; color:white">Database kota Surakarta</h4>
-				            
-                            </div>
+                <div id="logo">
+                    <a href=""><img alt="" src="images/logo.png" title="Database Bangunan Kota Surakarta">
+                    </a>
+                </div>
             </div>
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button -->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+
+                <div class="navbar-custom-menu"><!-- notification etc here --></div>
+                <div class="center-navbar"><h3 style="text-align:center; color:white">Database Bangunan Kota Surakarta</h3></div>
+            </nav>
         </div>
     </nav>
     <div class="content">
@@ -66,16 +87,14 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="pull-right">
-                            
-                            <a href="#"><i class="ti-pie-chart" style="color:#9F0D20">&nbsp INFOGRAPHIC &nbsp&nbsp&nbsp</i></a>
-                            <a href="#"><i class="ti-location-pin" style="color:#9F0D20">&nbsp MAPS &nbsp&nbsp&nbsp</i></a>   
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="ti-location-pin" style="color:#9F0D20">&nbspENTER DASHBOARD &nbsp&nbsp&nbsp</i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#" data-toggle="modal" data-target="#login" >Login</a></li>
-                            </ul>
-                            
+                        <a href="{{ url('/') }}"><i class="ti-pie-chart" style="color:#9F0D20">&nbsp INFOGRAPHIC &nbsp&nbsp&nbsp</i></a>
+                        <a href="{{ url('/home') }}"><i class="ti-location-pin" style="color:#9F0D20">&nbsp MAPS &nbsp&nbsp&nbsp</i></a>   
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="ti-location-pin" style="color:#9F0D20">&nbspENTER DASHBOARD &nbsp&nbsp&nbsp</i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" data-toggle="modal" data-target="#login" >Login</a></li>
+                        </ul>                       
                     </div>
                     
                 </div>

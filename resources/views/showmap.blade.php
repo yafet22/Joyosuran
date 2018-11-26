@@ -33,7 +33,7 @@
 
         width: 100%;
 
-        height: 500px;
+        height: 700px;
 
     }
 
@@ -91,9 +91,6 @@
                             <span class="icon-bar bar3"></span>
                         </button>
 
-                        <div id="logo">
-					        <a href=""><img alt="" src="images/logo.png" title=""></a>
-				        </div>
                         <a style="color:white"class="navbar-brand" href="#">Dashboard</a>
                     </div>
                     <div class="collapse navbar-collapse">

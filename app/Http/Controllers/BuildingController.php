@@ -215,7 +215,12 @@ class BuildingController extends Controller
         $status1 = Building::where('statusbangunan','1')->count();
         $status2 = Building::where('statusbangunan','2')->count();
 
-        return view('Infographic', compact('Hunian','keagamaan', 'usaha','sosial_budaya','khusus','shm','shp','hgb','lain','luas1','luas2','luas3','koef1','koef2','koef3','imb1','imb2','imb3','status1','status2'));
+        if(!Session::get('login')){
+            return view('home2', compact('Hunian','keagamaan', 'usaha','sosial_budaya','khusus','shm','shp','hgb','lain','luas1','luas2','luas3','koef1','koef2','koef3','imb1','imb2','imb3','status1','status2')); 
+        }else
+        {
+            return view('Infographic', compact('Hunian','keagamaan', 'usaha','sosial_budaya','khusus','shm','shp','hgb','lain','luas1','luas2','luas3','koef1','koef2','koef3','imb1','imb2','imb3','status1','status2'));
+        }
     }
 
     public function export() 

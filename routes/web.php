@@ -37,7 +37,7 @@ Route::get('/logout', 'AdminController@logout');
 Route::post('/editPost', 'AdminController@editPost');
 
 Route::get('/datamaster', 'DataMasterController@index')->name('datamaster');
-Route::get('/', 'MapController@index')->name('map');
+Route::get('/home', 'MapController@index')->name('map');
 Route::get('/map', 'MapController@index')->name('map');
 Route::get('/datamaster/statusbangunan', 'StatusBangunanController@index')->name('statusbangunan');
 Route::get('/datamaster/kecamatan', 'KecamatanController@index')->name('kecamatan');
@@ -81,5 +81,6 @@ Route::get('showBuildings/{id}',[
 ]);
 
 Route::get('/pieChart','BuildingController@getJumlahStatus');
+Route::get('/','BuildingController@getJumlahStatus');
 Route::get('/excel','BuildingController@export')->name('excel');
 Route::get('Building/pieChart', 'BuildingController@getJumlahStatus')->name('pieChart');
