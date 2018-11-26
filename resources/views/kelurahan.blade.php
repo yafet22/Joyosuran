@@ -36,40 +36,31 @@
             </div>
 
             <ul class="nav">
-                    <li>
-                        <a href="{{ url('/regiondata') }}">
-                            <i class="ti-location-pin"></i>
-                            <p>Region Data</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="ti-home"></i>
-                            <p>Buildings Data</p>
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="{{ url('/datamaster') }}">
-                            <i class="ti-view-list-alt"></i>
-                            <p>Data Master</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ url('/map') }}">
-                            <i class="ti-map-alt"></i>
-                            <p>Map</p>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="{{ url('/pieChart') }}">
-                            <i class="ti-pie-chart"></i>
-                            <p>INFOGRAPHIC</p>
-                        </a>
-                    </li>
-
-
-                </ul>
+                <li>
+                    <a href="{{ url('/regiondata') }}">
+                        <i class="ti-home"></i>
+                        <p>Data Bangunan</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="{{ url('/datamaster') }}">
+                        <i class="ti-view-list-alt"></i>
+                        <p>Data Referensi</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url('/map') }}">
+                        <i class="ti-map-alt"></i>
+                        <p>Map</p>
+                    </a>
+                </li> 
+                <li >
+                    <a href="{{ url('/pieChart') }}">
+                        <i class="ti-pie-chart"></i>
+                        <p>INFOGRAPHIC</p>
+                    </a>
+                </li>
+            </ul>
     	</div>
     </div>
 
@@ -139,7 +130,7 @@
                         <div class="table-responsive">
                             <table id=tableadmin class="table table-md table-bordered">
                                 <tr style="background-color:#9F0D20;color:white;">
-                                    <th class="font-weight-bold" style="text-align: center;">ID kelurahan</th>
+                                    <th class="font-weight-bold" style="text-align: center;">Nomor Kelurahan</th>
                                     <th class="font-weight-bold" style="text-align: center;">Kelurahan</th>
                                     <th class="font-weight-bold" style="text-align: center;">Kecamatan</th>
                                     <th class="font-weight-bold" style="text-align: center;">Keterangan</th>
@@ -148,7 +139,7 @@
                                 @if(count($kelurahans))
                                 @foreach($kelurahans as $data)
                                 <tr style="text-align:center;">
-                                    <td style="text-align: center;">{{$data->kelurahanid}}</td>
+                                    <td style="text-align: center;">{{$data->nokelurahan}}</td>
                                     <td style="text-align: center;">{{$data->nama}}</td>
                                     <td style="text-align: center;">{{$data->kecamatans->nama}}</td>
                                     <td style="text-align: center;">{{$data->keterangan}}</td>
@@ -209,6 +200,10 @@
                                         <option value="{{ $kecamatan->kecamatanid }}"> {{ $kecamatan->nama }}</option>
                                     @endforeach
                                 </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="nokelurahan">Nomor Kelurahan</label>
+                                <input type="name" class="form-control" id="nokelurahan" name="nokelurahan">
                             </div> 
                             <div class="form-group">
                                 <label for="nama">Kelurahan</label>

@@ -39,7 +39,7 @@ class MapController extends Controller
                 $query->where('gss','like',"%{$request->gss}%");
             })->when($request->kdb, function ($query) use ($request) {
                 $query->where('kdb','like',"%{$request->kdb}%");
-            })->get(); 
+            })->orderBy('latitude', 'DESC')->get(); 
     
             $status = StatusBangunan::pluck('nama','statusid');
             return view('home',compact('buildings','status'));
@@ -70,7 +70,7 @@ class MapController extends Controller
                 $query->where('gss','like',"%{$request->gss}%");
             })->when($request->kdb, function ($query) use ($request) {
                 $query->where('kdb','like',"%{$request->kdb}%");
-            })->get(); 
+            })->orderBy('latitude', 'DESC')->get(); 
     
             $status = StatusBangunan::pluck('nama','statusid');
             return view('showmap',compact('buildings','status'));

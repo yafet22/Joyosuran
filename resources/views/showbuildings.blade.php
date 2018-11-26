@@ -36,39 +36,31 @@
             </div>
 
             <ul class="nav">
-                    <li>
-                        <a href="{{ url('/regiondata') }}">
-                            <i class="ti-location-pin"></i>
-                            <p>Region Data</p>
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="">
-                            <i class="ti-home"></i>
-                            <p>Buildings Data</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ url('/datamaster') }}">
-                            <i class="ti-view-list-alt"></i>
-                            <p>Data Master</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ url('/map') }}">
-                            <i class="ti-map-alt"></i>
-                            <p>Map</p>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="{{ url('/pieChart') }}">
-                            <i class="ti-pie-chart"></i>
-                            <p>INFOGRAPHIC</p>
-                        </a>
-                    </li>
-
-                </ul>
+                <li class="active">
+                    <a href="{{ url('/regiondata') }}">
+                        <i class="ti-home"></i>
+                        <p>Data Bangunan</p>
+                    </a>
+                </li>
+                <li >
+                    <a href="{{ url('/datamaster') }}">
+                        <i class="ti-view-list-alt"></i>
+                        <p>Data Referensi</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url('/map') }}">
+                        <i class="ti-map-alt"></i>
+                        <p>Map</p>
+                    </a>
+                </li> 
+                <li >
+                    <a href="{{ url('/pieChart') }}">
+                        <i class="ti-pie-chart"></i>
+                        <p>INFOGRAPHIC</p>
+                    </a>
+                </li>
+            </ul>
     	</div>
     </div>
 
@@ -242,6 +234,7 @@
                                 </tr>
                                 @endif
                             </table>
+                            {!! $buildings->appends(\Request::except('page'))->render() !!}
                         </div> 
                     </div>
                 </div>
@@ -520,7 +513,7 @@
                           
             },function(err){
                 if (err.code == 1) {
-                    var center = new GLatLng(-7.79722, 110.36880);
+                    var center = new GLatLng( -7.5819838, 110.826532);
                     map.setCenter(center, 15);
                     geocoder = new GClientGeocoder();
                     var marker = new GMarker(center, {draggable: true});

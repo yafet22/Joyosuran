@@ -52,6 +52,7 @@ class KelurahanController extends Controller
             'nama' => 'required',
             'keterangan' => 'required',
             'kecamatanid' => 'required',
+            'nokelurahan' => 'required',
         ]);
         
       
@@ -60,6 +61,7 @@ class KelurahanController extends Controller
         $kelurahans->nama=$request->get('nama');
         $kelurahans->keterangan=$request->get('keterangan');
         $kelurahans->kecamatanid=$request->get('kecamatanid');
+        $kelurahans->nokelurahan=$request->get('nokelurahan');
         $kelurahans->save();
     
         
@@ -101,6 +103,7 @@ class KelurahanController extends Controller
             'nama' => 'required',
             'keterangan' => 'required',
             'kecamatanid' => 'required',
+            'nokelurahan' => 'required',
         ]);
         
       
@@ -109,6 +112,7 @@ class KelurahanController extends Controller
         $kelurahans->nama=$request->get('nama');
         $kelurahans->keterangan=$request->get('keterangan');
         $kelurahans->kecamatanid=$request->get('kecamatanid');
+        $kelurahans->nokelurahan=$request->get('nokelurahan');
         $kelurahans->save();
         
         return redirect()->route('kelurahan');

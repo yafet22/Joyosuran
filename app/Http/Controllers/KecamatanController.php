@@ -50,6 +50,7 @@ class KecamatanController extends Controller
         $this->validate($request,[
             'nama' => 'required',
             'keterangan' => 'required',
+            'nokecamatan' => 'required',
         ]);
         
       
@@ -57,6 +58,7 @@ class KecamatanController extends Controller
         $kecamatans = new Kecamatan;
         $kecamatans->nama=$request->get('nama');
         $kecamatans->keterangan=$request->get('keterangan');
+        $kecamatans->nokecamatan=$request->get('nokecamatan');
         $kecamatans->save();
     
         
@@ -97,6 +99,7 @@ class KecamatanController extends Controller
         $this->validate($request,[
             'nama' => 'required',
             'keterangan' => 'required',
+            'nokecamatan' => 'required',
         ]);
         
       
@@ -104,6 +107,7 @@ class KecamatanController extends Controller
         $kecamatans = Kecamatan::find($id);
         $kecamatans->nama=$request->get('nama');
         $kecamatans->keterangan=$request->get('keterangan');
+        $kecamatans->nokecamatan=$request->get('nokecamatan');
         $kecamatans->save();
     
         

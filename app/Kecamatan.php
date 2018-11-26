@@ -9,7 +9,7 @@ class Kecamatan extends Model
     protected $table = 'kecamatans';
     protected $primaryKey = 'kecamatanid';
     public $timestamps = true;
-    protected $fillable = ['nama','keterangan'];
+    protected $fillable = ['nama','keterangan','nokecamatan'];
 
     public function kelurahans(){
         return $this->hasMany('App\Kelurahan','kecamatanid');

@@ -12,7 +12,7 @@ class Building extends Model
     protected $table = 'buildings';
     protected $primaryKey = 'buildingid';
     public $timestamps = true;
-    protected $fillable = ['regionid','nobangunan','namapemilik'
+    protected $fillable = ['regionid','nomor','nobangunan','namapemilik'
     ,'fungsibangunan','statusbangunan','statustanah','luastanah',
     'jumlahlantai','tinggibangunan','koefisiendasarbangunan',
     'imb','gsj','gsb','gss','kdb','latitude','longitude','foto'];
