@@ -4,6 +4,10 @@
         {!! Form::select('kecamatanid', $datas, $kelurahans->kecamatanid,array('class'=>'form-control','id'=>'kecamatan')) !!} 
     </div>
     <div class="form-row">
+        <label for="nokelurahan">Nomor Kelurahan</label>
+        {!!Form::text('nokelurahan',$kelurahans->nokelurahan,array('placeholder' =>'nomor kelurahan','class'=>'form-control','id'=>'nokelurahan'))!!}
+    </div>
+    <div class="form-row">
         <label for="nama">Kelurahan</label>
         {!!Form::text('nama',$kelurahans->nama,array('placeholder' =>'nama yang mendeskripsikan kelurahan','class'=>'form-control','id'=>'nama'))!!}
     </div>

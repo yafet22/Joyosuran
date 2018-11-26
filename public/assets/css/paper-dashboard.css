@@ -486,7 +486,7 @@ hr {
 
 .sidebar[data-active-color="danger"] .nav li.active > a,
 .off-canvas-sidebar[data-active-color="danger"] .nav li.active > a {
-    color: #EB5E28;
+    color: #9F0D20;
     opacity: 1;
 }
 

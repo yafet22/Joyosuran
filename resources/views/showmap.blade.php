@@ -52,38 +52,31 @@
             </div>
 
             <ul class="nav">
-                    <li>
-                        <a href="{{ url('/regiondata') }}">
-                            <i class="ti-location-pin"></i>
-                            <p>Region Data</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="ti-home"></i>
-                            <p>Buildings Data</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ url('/datamaster') }}">
-                            <i class="ti-view-list-alt"></i>
-                            <p>Data Master</p>
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="{{ url('/map') }}">
-                            <i class="ti-map-alt"></i>
-                            <p>Map</p>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="{{ url('/pieChart') }}">
-                            <i class="ti-pie-chart"></i>
-                            <p>INFOGRAPHIC</p>
-                        </a>
-                    </li>
-                </ul>
+                <li >
+                    <a href="{{ url('/regiondata') }}">
+                        <i class="ti-home"></i>
+                        <p>Data Bangunan</p>
+                    </a>
+                </li>
+                <li >
+                    <a href="{{ url('/datamaster') }}">
+                        <i class="ti-view-list-alt"></i>
+                        <p>Data Referensi</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="{{ url('/map') }}">
+                        <i class="ti-map-alt"></i>
+                        <p>Map</p>
+                    </a>
+                </li> 
+                <li >
+                    <a href="{{ url('/pieChart') }}">
+                        <i class="ti-pie-chart"></i>
+                        <p>INFOGRAPHIC</p>
+                    </a>
+                </li>
+            </ul>
     	</div>
     </div>
 
@@ -133,6 +126,7 @@
                                 <div class="form-row">
                                     <div class="col-md-12 text-center">
                                         <h3>FILTER DATA</h3>
+                                        <p>Jumlah data : {{ $jumlah }}</p>
                                     </div>  
                                 </div>  
                                 <div class="form-row">
@@ -267,9 +261,9 @@
 
         el: '#mymap',
  
-        lat:  -7.79722,
+        lat:  -7.5819838,
 
-        lng: 110.36880,
+        lng: 110.826532,
 
         zoom:15
 

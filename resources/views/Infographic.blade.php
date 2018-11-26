@@ -35,39 +35,31 @@
                 </div>
 
                 <ul class="nav">
-                        <li>
-                            <a href="{{ url('/regiondata') }}">
-                                <i class="ti-location-pin"></i>
-                                <p>Region Data</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <i class="ti-home"></i>
-                                <p>Buildings Data</p>
-                            </a>
-                        </li>
-                        <li class="active">
-                            <a href="{{ url('/datamaster') }}">
-                                <i class="ti-view-list-alt"></i>
-                                <p>Data Master</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ url('/map') }}">
-                                <i class="ti-map-alt"></i>
-                                <p>Map</p>
-                            </a>
-                        </li>
-                        
                     <li>
+                        <a href="{{ url('/regiondata') }}">
+                            <i class="ti-home"></i>
+                            <p>Data Bangunan</p>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="{{ url('/datamaster') }}">
+                            <i class="ti-view-list-alt"></i>
+                            <p>Data Referensi</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/map') }}">
+                            <i class="ti-map-alt"></i>
+                            <p>Map</p>
+                        </a>
+                    </li> 
+                    <li class="active">
                         <a href="{{ url('/pieChart') }}">
                             <i class="ti-pie-chart"></i>
                             <p>INFOGRAPHIC</p>
                         </a>
                     </li>
-                    
-                    </ul>
+                </ul>
             </div>
         </div>
 
@@ -114,75 +106,48 @@
                         <div class="col-lg-4 col-sm-6">
                             <div class="card">
                                 <div class="content">
-                                    <div class="row">
-                                        <div class="col-xs-5">
-                                            <div class="icon-big icon-warning text-center">
-                                                <i class="ti-server"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-7">
-                                            <div class="numbers">
-                                            <p>Status Bangunan</p>
-                                                {{ $status }} Data   
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="footer">
-                                        <hr />
-                                        <div class="stats">
-                                            <a href="{{ route('statusbangunan')}}">Lihat Detail &nbsp&nbsp<i class="ti-angle-double-right"></i></a>
-                                        </div>
-                                    </div>
+                                    <h3 class="text-center">Fungsi Bangunan</h3>
+                                    <canvas id="myChart"></canvas> 
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-sm-6">
                             <div class="card">
                                 <div class="content">
-                                    <div class="row">
-                                        <div class="col-xs-5">
-                                            <div class="icon-big icon-success text-center">
-                                                <i class="ti-server"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-7">
-                                            <div class="numbers">
-                                                <p>Kecamatan</p>
-                                                {{ $kecamatans }} Data
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="footer">
-                                        <hr />
-                                        <div class="stats">
-                                            <a href="{{ route('kecamatan')}}">Lihat Detail &nbsp&nbsp<i class="ti-angle-double-right"></i></a>
-                                        </div>
-                                    </div>
+                                    <h3 class="text-center">Status Tanah</h3>
+                                    <canvas id="statustanah"></canvas> 
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-sm-6">
                             <div class="card">
                                 <div class="content">
-                                    <div class="row">
-                                        <div class="col-xs-5">
-                                            <div class="icon-big icon-danger text-center">
-                                                <i class="ti-server"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-7">
-                                            <div class="numbers">
-                                                <p>Kelurahan</p>
-                                                {{ $kelurahans }} Data
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="footer">
-                                        <hr />
-                                        <div class="stats">
-                                            <a href="{{ route('kelurahan')}}">Lihat Detail &nbsp&nbsp<i class="ti-angle-double-right"></i></a>
-                                        </div>
-                                    </div>
+                                    <h3 class="text-center">Luas Tanah</h3>
+                                    <canvas id="luastanah"></canvas> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="card">
+                                <div class="content">
+                                    <h3 class="text-center">Koefisien Dasar</h3>
+                                    <canvas id="koefisiendasarbangunan"></canvas> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="card">
+                                <div class="content">
+                                    <h3 class="text-center">IMB</h3>
+                                    <canvas id="imb"></canvas> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="card">
+                                <div class="content">
+                                    <h3 class="text-center">Status Bangunan</h3>
+                                    <canvas id="statusbangunan"></canvas> 
                                 </div>
                             </div>
                         </div>
@@ -236,6 +201,8 @@
         </div>
     </div>
     
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
         <script src="{{asset('assets/js/jquery.min.js')}}"></script>
 
         <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
@@ -250,6 +217,250 @@
 
         <script src="{{asset('assets/js/demo.js')}}"></script>
 
+        <script>
+        var ctx = document.getElementById("myChart");
 
+        var dataTable = [{{ $Hunian }}, {{ $keagamaan }}, {{ $usaha }},{{ $sosial_budaya }}, {{ $khusus }}]
+        var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ["Hunian","Keagamaan", "Usaha", "Sosial Budaya", "Khusus"],
+                datasets: [{
+                    label: 'Fungsional',
+                    data: dataTable,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    pointHitRadius : 10,
+                    pointRadius : 10,
+                    pointHoverBorderColor : 'rgba(255, 159, 64, 3)',
+                }]
+                
+            },
+            
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero:true
+                        }
+                    }]
+                }
+            }
+        });
+        </script>
+
+        <script>
+        var ctx = document.getElementById("statustanah");
+
+        var dataTable = [{{ $shm }}, {{ $shp }}, {{ $hgb }},{{ $lain }}]
+        var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ["SHM","SHP", "HGB", "Lain-lain"],
+                datasets: [{
+                    label: 'Fungsional',
+                    data: dataTable,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                    ],
+                    pointHitRadius : 10,
+                    pointRadius : 10,
+                    pointHoverBorderColor : 'rgba(255, 159, 64, 3)',
+                }]
+                
+            },
+            
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero:true
+                        }
+                    }]
+                }
+            }
+        });
+        </script>
+
+        <script>
+        var ctx = document.getElementById("luastanah");
+
+        var dataTable = [{{ $luas1 }}, {{ $luas2 }}, {{ $luas3 }}]
+        var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ["<500m2","500m2 - 5000m2", ">5000m2"],
+                datasets: [{
+                    label: 'Fungsional',
+                    data: dataTable,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                    ],
+                    pointHitRadius : 10,
+                    pointRadius : 10,
+                    pointHoverBorderColor : 'rgba(255, 159, 64, 3)',
+                }]
+                
+            },
+            
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero:true
+                        }
+                    }]
+                }
+            }
+        });
+        </script>
+
+        <script>
+        var ctx = document.getElementById("koefisiendasarbangunan");
+
+        var dataTable = [{{ $koef1 }}, {{ $koef2 }}, {{ $koef3 }}]
+        var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ["< 40","40 - 80", "> 80"],
+                datasets: [{
+                    label: 'Fungsional',
+                    data: dataTable,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                    ],
+                    pointHitRadius : 10,
+                    pointRadius : 10,
+                    pointHoverBorderColor : 'rgba(255, 159, 64, 3)',
+                }]
+                
+            },
+            
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero:true
+                        }
+                    }]
+                }
+            }
+        });
+        </script>
+
+        <script>
+        var ctx = document.getElementById("imb");
+
+        var dataTable = [{{ $imb1 }}, {{ $imb2 }}, {{ $imb3 }}]
+        var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ["Ada Sesuai","Ada Tidak Sesuai", "Tidak Ada"],
+                datasets: [{
+                    label: 'Fungsional',
+                    data: dataTable,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                    ],
+                    pointHitRadius : 10,
+                    pointRadius : 10,
+                    pointHoverBorderColor : 'rgba(255, 159, 64, 3)',
+                }]
+                
+            },
+            
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero:true
+                        }
+                    }]
+                }
+            }
+        });
+        </script>
+        
+        <script>
+        var ctx = document.getElementById("statusbangunan");
+
+        var dataTable = [{{ $status1 }}, {{ $status2 }}]
+        var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ["Bangunan Negara","Cagar Budaya"],
+                datasets: [{
+                    label: 'Fungsional',
+                    data: dataTable,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                    ],
+                    pointHitRadius : 10,
+                    pointRadius : 10,
+                    pointHoverBorderColor : 'rgba(255, 159, 64, 3)',
+                }]
+                
+            },
+            
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero:true
+                        }
+                    }]
+                }
+            }
+        });
+        </script>
 
     </html>

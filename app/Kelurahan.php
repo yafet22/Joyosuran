@@ -9,7 +9,7 @@ class Kelurahan extends Model
     protected $table = 'kelurahans';
     protected $primaryKey = 'kelurahanid';
     public $timestamps = true;
-    protected $fillable = ['nama','keterangan','kecamatanid'];
+    protected $fillable = ['nama','keterangan','kecamatanid','nokelurahan'];
 
     public function kecamatans()
     {
