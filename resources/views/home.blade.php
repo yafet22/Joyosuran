@@ -52,16 +52,15 @@
                     <span style="background-color:white" class="icon-bar bar3"></span>
                 </button>
                 
-                <div id="logo">
+                    <div id="logo">
 					        <a href=""><img alt="" src="images/logo.png" title="Database Bangunan Kota Surakarta">
                             </a>
                             <h4 style="text-align:center; color:white">Database kota Surakarta</h4>
-				        </div>
+				            
+                            </div>
             </div>
         </div>
     </nav>
-
-
     <div class="content">
         <div class="container-fluid">
             <div class="row">
