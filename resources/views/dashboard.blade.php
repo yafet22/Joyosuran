@@ -108,7 +108,10 @@
                         </div>
                     @endif
                     <div class="row">
-                        <div class="col-lg-12 margin-tb">  
+                        <div class="col-lg-12 margin-tb"> 
+                            <div class="pull-left">
+                            <a href="{{ route('excel') }}"><button class="btn btn-primary">Export Excel</button></a>
+                            </div>
                             <div class="pull-right">
                                 <button class="btn btn-primary" data-toggle="modal" data-target="#inputregion">Input Data</button>
                             </div>

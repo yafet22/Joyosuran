@@ -81,4 +81,5 @@ Route::get('showBuildings/{id}',[
 ]);
 
 Route::get('/pieChart','BuildingController@getJumlahStatus');
+Route::get('/excel','BuildingController@export')->name('excel');
 Route::get('Building/pieChart', 'BuildingController@getJumlahStatus')->name('pieChart');

@@ -10,6 +10,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
+use App\Exports\BangunanExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class BuildingController extends Controller
 {
@@ -214,5 +216,11 @@ class BuildingController extends Controller
         $status2 = Building::where('statusbangunan','2')->count();
 
         return view('Infographic', compact('Hunian','keagamaan', 'usaha','sosial_budaya','khusus','shm','shp','hgb','lain','luas1','luas2','luas3','koef1','koef2','koef3','imb1','imb2','imb3','status1','status2'));
+    }
+
+    public function export() 
+    {
+        return Excel::download(new BangunanExport, 'Bangunan.xlsx');
+
     }
 }

@@ -78,6 +78,7 @@
                             <div class="form-row">
                                 <div class="col-md-12 text-center">
                                     <h3>FILTER DATA</h3>
+                                    <p>Jumlah data : {{ $jumlah }}</p>
                                 </div>  
                             </div>  
                             <div class="form-row">
