@@ -42,33 +42,42 @@
 <body>
 
     <nav class="navbar navbar-default">
-        <div class="container-fluid">
+    <div class="container-fluid" style="background-color:#9F0D20">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle">
+            
+                <button type="button" class="navbar-toggle" >
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar bar1"></span>
-                    <span class="icon-bar bar2"></span>
-                    <span class="icon-bar bar3"></span>
+                    <span style="background-color:white" class="icon-bar bar1"></span>
+                    <span style="background-color:white" class="icon-bar bar2"></span>
+                    <span style="background-color:white" class="icon-bar bar3"></span>
                 </button>
-                <a class="navbar-brand" href="#">Data Bangunan Joyosuran</a>
+                
+                    <div id="logo">
+					        <a href=""><img alt="" src="images/logo.png" title="Database Bangunan Kota Surakarta">
+                            </a>
+                            <h4 style="text-align:center; color:white">Database kota Surakarta</h4>
+				            
+                            </div>
             </div>
         </div>
     </nav>
-
-
     <div class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="pull-right">
-   
+                            
+                            <a href="#"><i class="ti-pie-chart" style="color:#9F0D20">&nbsp INFOGRAPHIC &nbsp&nbsp&nbsp</i></a>
+                            <a href="#"><i class="ti-location-pin" style="color:#9F0D20">&nbsp MAPS &nbsp&nbsp&nbsp</i></a>   
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <p>ENTER DASHBOARD</p>
+                                <i class="ti-location-pin" style="color:#9F0D20">&nbspENTER DASHBOARD &nbsp&nbsp&nbsp</i>
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="#" data-toggle="modal" data-target="#login" >Login</a></li>
                             </ul>
+                            
                     </div>
+                    
                 </div>
             </div>   
             <div class="row">
