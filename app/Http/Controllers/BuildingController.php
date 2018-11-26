@@ -193,6 +193,26 @@ class BuildingController extends Controller
         $sosial_budaya = Building::where('fungsibangunan','sosial-budaya')->count();
         $khusus = Building::where('fungsibangunan','khusus')->count();
 
-        return view('pieChart', compact('Hunian','keagamaan', 'usaha','sosial_budaya','khusus'));
+        $shm = Building::where('statustanah','SHM')->count();
+        $shp = Building::where('statustanah','SHP')->count();
+        $hgb = Building::where('statustanah','HGB')->count();
+        $lain = Building::where('statustanah','Lain-lain')->count();
+
+        $luas1 = Building::where('luastanah','< 500m2')->count();
+        $luas2 = Building::where('luastanah','500 - 5000')->count();
+        $luas3 = Building::where('luastanah','> 5000m2')->count();
+
+        $koef1 = Building::where('koefisiendasarbangunan','< 40')->count();
+        $koef2 = Building::where('koefisiendasarbangunan','40 - 80')->count();
+        $koef3 = Building::where('koefisiendasarbangunan','> 80')->count();
+
+        $imb1 = Building::where('imb','Ada Sesuai')->count();
+        $imb2 = Building::where('imb','Ada Tidak Sesuai')->count();
+        $imb3 = Building::where('imb','Tidak Ada')->count();
+
+        $status1 = Building::where('statusbangunan','1')->count();
+        $status2 = Building::where('statusbangunan','2')->count();
+
+        return view('Infographic', compact('Hunian','keagamaan', 'usaha','sosial_budaya','khusus','shm','shp','hgb','lain','luas1','luas2','luas3','koef1','koef2','koef3','imb1','imb2','imb3','status1','status2'));
     }
 }

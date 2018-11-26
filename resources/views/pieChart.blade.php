@@ -12,11 +12,10 @@
     <div class="col-md-12 text-center center-block mb-3">
         </div>
     </div>
-<canvas id="myChart"></canvas> 
+
 </body>
 </html>
-<script src="path/to/chartjs/dist/Chart.js"></script>
-<script src="{!! mix('js/app.js') !!}"></script>
+
 <script>
 var ctx = document.getElementById("myChart");
 
