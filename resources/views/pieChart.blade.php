@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Page njay<a href=""></a></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
@@ -53,8 +53,8 @@ var myPieChart = new Chart(ctx, {
     options: {
         scales: {
             yAxes: [{
-                ticks: {
-                    beginAtZero:true
+                gridLines : {
+                    display : false
                 }
             }]
         }
